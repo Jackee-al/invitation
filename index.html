@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#072519">
-<title>Aamir &amp; Murk | Walima Invitation</title>
-<meta property="og:title" content="Aamir &amp; Murk | Walima Invitation">
-<meta property="og:description" content="Saturday, 14 November 2026 at The Petal Banquet, Karachi">
+<meta name="robots" content="noindex, nofollow">
+<title>Engr. Aamir Khan | Dawat-e-Walima</title>
+<meta property="og:title" content="Engr. Aamir Khan | Dawat-e-Walima">
+<meta property="og:description" content="Saturday, 14 November 2026 at The Petals Banquet, Karachi">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -34,6 +35,7 @@ body{
   color:var(--gold-light);background:var(--emerald-deep);
   overflow-x:hidden;-webkit-font-smoothing:antialiased;
 }
+body{padding-bottom:env(safe-area-inset-bottom,0px)}
 body.locked{overflow:hidden;height:100dvh}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
@@ -111,7 +113,7 @@ body.go #petals{opacity:1}
 .rv.in{opacity:1;transform:none}
 
 /* ---------- hero ---------- */
-.hero{min-height:100dvh;padding:0 1rem 2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+.hero{min-height:100dvh;padding:env(safe-area-inset-top,0px) 1rem 2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
   background:radial-gradient(ellipse at 50% 30%,#17614a 0%,transparent 62%),var(--emerald-deep);overflow:hidden}
 .lights{position:relative;width:100%;height:74px;margin-bottom:.2rem;opacity:0;transition:opacity 1.6s ease}
 body.go .lights{opacity:1}
@@ -123,7 +125,8 @@ body.go .bism{animation:fadeIn 1.6s ease forwards .6s}
 .stage{position:relative;height:min(46dvh,440px);aspect-ratio:420/600;margin:.2rem 0 0;will-change:transform}
 .stage svg{width:100%;height:100%;display:block;overflow:visible}
 .names{margin-top:.6rem;display:flex;flex-direction:column;align-items:center;line-height:1}
-.names .nm{font-family:var(--script);font-size:clamp(3.4rem,16vw,5.6rem);line-height:1.15;display:inline-block}
+.names .nm{font-family:var(--script);font-size:clamp(2.3rem,10.5vw,4.2rem);line-height:1.2;display:inline-block}
+.names .nm2{font-size:clamp(1.7rem,8vw,3rem)}
 .names .and{font-family:var(--script);font-size:clamp(1.8rem,8vw,2.6rem);color:var(--gold);line-height:1}
 .wipe{clip-path:inset(-30% 101% -30% -5%)}
 body.go .wipe{animation:wipe 1.7s cubic-bezier(.6,.1,.3,1) forwards;animation-delay:var(--wd,3.1s)}
@@ -178,6 +181,7 @@ body.go .lantern{animation:fadeIn 1.2s ease forwards var(--fd,1.8s),sway 5s ease
 .walima{font-family:var(--script);font-size:clamp(3.6rem,17vw,5.4rem);color:var(--maroon);line-height:1.1}
 .day{font-family:var(--cap);letter-spacing:.34em;font-size:.95rem;color:var(--ink)}
 .numeral{font-weight:700;font-size:clamp(6.2rem,32vw,9.5rem);line-height:.9;color:var(--maroon)}
+.numeral sup{font-family:var(--cap);font-size:.24em;font-weight:600;vertical-align:top;position:relative;top:.5em;margin-left:.1em;letter-spacing:.08em}
 .month{font-family:var(--cap);letter-spacing:.3em;font-size:1.05rem}
 .tl{position:relative;display:grid;gap:2rem;margin:1.6rem 0 .6rem;width:100%}
 .tl::before{content:"";position:absolute;left:50%;top:14px;bottom:14px;width:1px;background:var(--gold);
@@ -205,7 +209,20 @@ body.go .lantern{animation:fadeIn 1.2s ease forwards var(--fd,1.8s),sway 5s ease
 .btn.gold:hover{filter:brightness(1.08)}
 .mapwin{width:min(100%,400px);aspect-ratio:4/4.6;margin-top:2rem;border-radius:200px 200px 14px 14px;overflow:hidden;
   box-shadow:0 0 0 6px var(--paper),0 0 0 7.5px var(--gold),0 24px 40px rgba(60,40,10,.25)}
-.mapwin iframe{width:100%;height:100%;border:0;filter:sepia(.28) saturate(.85)}
+.mapwin{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;text-decoration:none;color:var(--gold-light);
+  background:
+    linear-gradient(rgba(212,175,90,.10) 1px,transparent 1px) 0 0/34px 34px,
+    linear-gradient(90deg,rgba(212,175,90,.10) 1px,transparent 1px) 0 0/34px 34px,
+    radial-gradient(ellipse at 50% 40%,#17614a,var(--emerald) 70%);
+  transition:transform .4s ease}
+.mapwin:hover{transform:translateY(-4px)}
+.mapwin .pin{width:64px;margin-bottom:.4rem;overflow:visible;animation:bob 2.6s ease-in-out infinite}
+.mapwin .pulse{transform-origin:30px 70px;animation:ping 2.6s ease-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(2.4);opacity:0}}
+.mw-name{font-size:1.7rem;font-weight:700;line-height:1.1;color:#fff3cf}
+.mw-city{font-size:1.1rem;font-style:italic}
+.mw-cta{margin-top:.8rem;font-family:var(--cap);font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;border:1px solid var(--gold);border-radius:999px;padding:.5rem 1rem}
 
 /* ---------- rsvp ---------- */
 .mono{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;
@@ -249,7 +266,7 @@ body.go .lantern{animation:fadeIn 1.2s ease forwards var(--fd,1.8s),sway 5s ease
     <span class="letter"><b>You're Invited</b><i>Walima</i></span>
     <span class="front"></span>
     <span class="flap"></span>
-    <span class="seal">A&amp;M</span>
+    <span class="seal">AK</span>
   </button>
   <p class="gate-hint" id="hint">Tap to open</p>
 </div>
@@ -295,11 +312,11 @@ body.go .lantern{animation:fadeIn 1.2s ease forwards var(--fd,1.8s),sway 5s ease
   </div>
 
   <h1 class="names foil-wrap">
-    <span class="wipe" style="--wd:3.1s"><span class="nm foil">Aamir</span></span>
-    <span class="and h-line" style="--hd:3.9s">&amp;</span>
-    <span class="wipe" style="--wd:4.1s"><span class="nm foil">Murk</span></span>
+    <span class="wipe" style="--wd:3.1s"><span class="nm foil">Engr. Aamir Khan</span></span>
+    <span class="and h-line" style="--hd:3.9s">with</span>
+    <span class="wipe" style="--wd:4.1s"><span class="nm nm2 foil">D/O Mr. Muzaffar Ali</span></span>
   </h1>
-  <p class="cap sub h-line" style="--hd:5s">Walima Celebration</p>
+  <p class="cap sub h-line" style="--hd:5s">Dawat-e-Walima</p>
   <p class="date-line h-line" style="--hd:5.3s">14 November 2026</p>
   <div class="cue" aria-hidden="true">Scroll<span></span></div>
 </header>
@@ -318,13 +335,14 @@ body.go .lantern{animation:fadeIn 1.2s ease forwards var(--fd,1.8s),sway 5s ease
 <!-- 3. INVITATION + COUNTDOWN -->
 <section class="sec dark">
   <div class="wrap">
-    <p class="cap rv">With the blessings of Almighty Allah</p>
-    <p class="host rv" style="--d:.15s">Mr. &amp; Mrs. Ghulam Qadir Lund</p>
-    <p class="lead rv" style="--d:.3s">request the pleasure of your company<br>at the Walima of their son</p>
-    <p class="big-name foil rv scale" style="--d:.45s">Aamir Khan</p>
-    <p class="with rv" style="--d:.6s">with</p>
-    <p class="big-name foil rv scale" style="--d:.7s">Murk</p>
-    <p class="lead rv" style="--d:.85s">daughter of<br><span class="host" style="font-size:1.5rem">Mr. &amp; Mrs. Muzaffar Ali</span></p>
+    <p class="lead rv" style="max-width:30ch">In the name of Allah,<br>the most Beneficent &amp; the most Merciful</p>
+    <p class="host rv" style="--d:.15s">Mr. and Mrs. Ghulam Qadir Baloch</p>
+    <p class="lead rv" style="--d:.3s">Cordially invites you to the</p>
+    <p class="big-name foil rv scale" style="--d:.4s;font-size:clamp(2.8rem,13vw,4.4rem)">Dawat-e-Walima</p>
+    <p class="lead rv" style="--d:.55s">of their beloved son</p>
+    <p class="big-name foil rv scale" style="--d:.65s;font-size:clamp(2.3rem,11vw,3.8rem)">Engr. Aamir Khan</p>
+    <p class="cap rv" style="--d:.8s;color:var(--gold)">With</p>
+    <p class="big-name foil rv scale" style="--d:.9s;font-size:clamp(1.8rem,8.5vw,3rem)">D/O Mr. Muzaffar Ali</p>
 
     <svg class="divider rv" style="margin-top:1.6rem" aria-hidden="true"><use href="#div"/></svg>
     <p class="cap rv">Counting down to the celebration</p>
@@ -343,7 +361,7 @@ body.go .lantern{animation:fadeIn 1.2s ease forwards var(--fd,1.8s),sway 5s ease
   <div class="wrap">
     <p class="walima rv">Walima</p>
     <p class="day rv" style="--d:.1s">Saturday</p>
-    <p class="numeral rv scale" style="--d:.2s">14</p>
+    <p class="numeral rv scale" style="--d:.2s">14<sup>th</sup></p>
     <p class="month rv" style="--d:.3s">November 2026</p>
 
     <div class="tl rv-line" id="tl">
@@ -353,29 +371,39 @@ body.go .lantern{animation:fadeIn 1.2s ease forwards var(--fd,1.8s),sway 5s ease
 
     <svg class="divider rv" aria-hidden="true"><use href="#div"/></svg>
     <p class="cap rv">Venue</p>
-    <p class="venue rv" style="--d:.1s">The Petal Banquet</p>
-    <p class="addr rv" style="--d:.2s">PB1, Rizwan Co-operative Housing Society, Kiran Hospital Road, Safoora Chowrangi, Karachi</p>
+    <p class="venue rv" style="--d:.1s">The Petals Banquet</p>
+    <p class="addr rv" style="--d:.2s">PB 1, Rizwan Co Opt Housing Society, Kiran Hospital Road, Safoora Chowrangi, Karachi.</p>
     <div class="btns rv" style="--d:.3s">
       <a class="btn" id="mapBtn" target="_blank" rel="noopener">Get Directions</a>
       <a class="btn" id="calBtn" target="_blank" rel="noopener">Add to Calendar</a>
     </div>
-    <div class="mapwin rv scale"><iframe id="mapFrame" title="Map of The Petal Banquet" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <a class="mapwin rv scale" id="mapCard" target="_blank" rel="noopener" aria-label="Open The Petals Banquet in Google Maps">
+      <svg class="pin" viewBox="0 0 60 80" aria-hidden="true">
+        <ellipse class="pulse" cx="30" cy="70" rx="14" ry="5" fill="none" stroke="#D4AF5A" stroke-width="1.2"/>
+        <path d="M30 4C17 4 8 13 8 25c0 16 22 40 22 40s22-24 22-40C52 13 43 4 30 4z" fill="#D4AF5A" stroke="#F4DE9B" stroke-width="1.5"/>
+        <circle cx="30" cy="25" r="8" fill="#0E3B2C"/>
+      </svg>
+      <span class="mw-name">The Petals Banquet</span>
+      <span class="mw-city">Safoora Chowrangi, Karachi</span>
+      <span class="mw-cta">Tap for directions</span>
+    </a>
   </div>
 </section>
 
 <!-- 5. RSVP -->
 <section class="sec dark">
   <div class="wrap">
-    <div class="mono foil rv scale">A&amp;M</div>
-    <p class="rsvp-title foil rv" style="--d:.1s">We would love to see you</p>
-    <p class="lead rv" style="--d:.2s">Kindly confirm your presence</p>
+    <div class="mono foil rv scale">AK</div>
+    <p class="lead rv" style="--d:.1s">Your presence will be a source of</p>
+    <p class="rsvp-title foil rv" style="--d:.2s">great honor for us</p>
+    <svg class="divider rv" aria-hidden="true"><use href="#div"/></svg>
+    <p class="cap rv" style="color:var(--gold)">RSVP</p>
+    <p class="lead rv" style="--d:.1s">Family &amp; Friends</p>
     <div class="btns rv" style="--d:.3s">
       <a class="btn gold" id="waBtn" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn" id="callBtn">Call 0300 9276431</a>
+      <a class="btn" id="callBtn">Call 0300-9276431</a>
+      <a class="btn" id="callBtn2">Call 0333-3011146</a>
     </div>
-    <svg class="divider rv" style="margin-top:1.4rem" aria-hidden="true"><use href="#div"/></svg>
-    <p class="lead rv">With love &amp; duas</p>
-    <p class="signoff foil rv" style="--d:.15s">Lund Baloch Family</p>
     <p class="foot rv" style="--d:.3s">14 &middot; 11 &middot; 2026</p>
   </div>
 </section>
@@ -388,12 +416,13 @@ const CONFIG = {
   target: "2026-11-14T21:00:00+05:00",   // event start (Pakistan time)
   calEnd: "20261115T000000",
   calStart: "20261114T210000",
-  venue: "The Petal Banquet",
-  address: "PB1, Rizwan Co-operative Housing Society, Kiran Hospital Road, Safoora Chowrangi, Karachi",
-  mapQuery: "The Petal Banquet, Rizwan Cooperative Housing Society, Kiran Hospital Road, Safoora Chowrangi, Karachi",
+  venue: "The Petals Banquet",
+  address: "PB 1, Rizwan Co Opt Housing Society, Kiran Hospital Road, Safoora Chowrangi, Karachi",
+  mapQuery: "The Petals Banquet, Rizwan Cooperative Housing Society, Kiran Hospital Road, Safoora Chowrangi, Karachi",
   whatsapp: "923009276431",   // country code, no +
   phone: "+923009276431",
-  waText: "Assalam o Alaikum! We received the Walima invitation of Aamir & Murk. In sha Allah we will be there."
+  phone2: "+923333011146",
+  waText: "Assalam o Alaikum! We received the Dawat-e-Walima invitation of Engr. Aamir Khan. In sha Allah we will be there."
 };
 /* ===================== */
 
@@ -402,13 +431,14 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* links */
 $("#mapBtn").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CONFIG.mapQuery);
-$("#mapFrame").src = "https://maps.google.com/maps?q=" + encodeURIComponent(CONFIG.mapQuery) + "&z=16&output=embed";
+$("#mapCard").href = $("#mapBtn").href;
 $("#calBtn").href = "https://calendar.google.com/calendar/render?" + new URLSearchParams({
-  action:"TEMPLATE", text:"Walima - Aamir & Murk", dates:CONFIG.calStart+"/"+CONFIG.calEnd,
+  action:"TEMPLATE", text:"Dawat-e-Walima - Engr. Aamir Khan", dates:CONFIG.calStart+"/"+CONFIG.calEnd,
   ctz:"Asia/Karachi", location:CONFIG.venue+", "+CONFIG.address
 });
 $("#waBtn").href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(CONFIG.waText);
 $("#callBtn").href = "tel:" + CONFIG.phone;
+$("#callBtn2").href = "tel:" + CONFIG.phone2;
 
 /* fairy lights */
 function drawLights(){
