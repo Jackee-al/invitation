@@ -609,8 +609,18 @@ onScroll();
 
 })();
 
-/* optional real couple photo: upload couple.jpg next to index.html */
-(function(){ const t = new Image(); t.onload = () => $("#stage").classList.add("has-photo"); t.src = "couple.jpg"; })();
+/* optional real couple photo: couple.jpg / couple.jpeg / couple.png / couple.webp next to index.html */
+(function(){
+  const names = ["couple.jpg","couple.jpeg","couple.png","couple.webp","couple.JPG","couple.JPEG","Couple.jpg","Couple.jpeg"];
+  const img = document.getElementById("photoImg");
+  (function tryNext(i){
+    if(i >= names.length) return;
+    const t = new Image();
+    t.onload = () => { img.setAttribute("href", names[i]); $("#stage").classList.add("has-photo"); };
+    t.onerror = () => tryNext(i+1);
+    t.src = names[i];
+  })(0);
+})();
 
 const env = $("#env"), gate = $("#gate");
 env.addEventListener("click", () => {
